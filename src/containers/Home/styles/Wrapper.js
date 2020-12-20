@@ -8,12 +8,15 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: ${({ theme }) => `${theme.spacing.small} ${theme.spacing.medium}`};
 `;
 
 Wrapper.displayName = 'Wrapper';
 
-export const InputWrapper = styled.div`
-  width: 300px;
+export const SearchWrapper = styled.div`
+  max-width: 300px;
+  display: flex;
+  height: 62px;
 `;
 
-InputWrapper.displayName = 'InputWrapper';
+SearchWrapper.displayName = 'SearchWrapper';
