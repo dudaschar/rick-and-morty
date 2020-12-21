@@ -1,0 +1,8 @@
+import styled from 'styled-components';
+
+export const Image = styled.img`
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+`;
+
+Image.displayName = 'Image';
