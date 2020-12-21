@@ -29,7 +29,7 @@ function Home({ theme }) {
   }, [searchValue])
 
   const handleOnClick = () => {
-    const href = `/?character=${searchValue}`
+    const href = `/list?character=${searchValue}`
     router.push(href)
   }
 
