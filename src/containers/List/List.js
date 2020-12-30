@@ -6,7 +6,7 @@ import Button from 'src/components/Button/Button';
 import Pagination from 'src/components/Pagination/Pagination';
 
 import { PageWrapper, ListWrapper, SearchWrapper } from './styles/Wrapper';
-import { Title, FilterOptions } from './styles/Typography';
+import { Title, FilterOptions, Result } from './styles/Typography';
 
 function List({ characters, query }) {
   const [charactersResult, setCharactersResult] = useState(characters.results);
@@ -42,27 +42,32 @@ function List({ characters, query }) {
         </Button>
       </SearchWrapper>
       <ListWrapper>
-        {charactersResult.map(character => (
-          <CharacterCard
-            key={character.id}
-            info={character}
-          />
-        ))}
+        {charactersResult ? (
+          charactersResult.map(character => (
+            <CharacterCard
+              key={character.id}
+              info={character}
+            />
+          ))
+        ) : <Result>Not found :(</Result>}
       </ListWrapper>
       <Pagination
         charactersInfo={charactersInfo}
-        onPrev={() => handleNewResults(charactersInfo.prev)}
-        onNext={() => handleNewResults(charactersInfo.next)}
+        onPrev={() => handleNewResults(charactersInfo?.prev)}
+        onNext={() => handleNewResults(charactersInfo?.next)}
       />
     </PageWrapper>
   );
 }
 
 List.propTypes = {
-  characters: PropTypes.shape({
-    results: PropTypes.array.isRequired,
-    info: PropTypes.object.isRequired,
-  }).isRequired,
+  characters: PropTypes.oneOfType([
+    PropTypes.shape({
+      results: PropTypes.array.isRequired,
+      info: PropTypes.object.isRequired,
+    }),
+    PropTypes.string,
+  ]).isRequired,
   query: PropTypes.string.isRequired,
 }
 

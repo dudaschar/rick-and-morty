@@ -13,3 +13,9 @@ export const FilterOptions = styled.p`
 `
 
 FilterOptions.displayName = 'FilterOptions';
+
+export const Result = styled.p`
+  padding: 0 ${({ theme }) => theme.spacing.medium};
+`;
+
+Result.displayName = 'Result';

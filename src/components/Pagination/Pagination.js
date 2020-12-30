@@ -7,23 +7,23 @@ import { PaginationContainer } from './styles/Wrapper';
 import { Text } from './styles/Typography';
 
 function Pagination({ charactersInfo, onPrev, onNext }) {
-  const prevURL = charactersInfo.prev && new URL(charactersInfo.prev);
+  const prevURL = charactersInfo?.prev && new URL(charactersInfo.prev);
   const prevPage = prevURL?.searchParams.get('page')
   const currentPage = !prevURL ? 1 : Number(prevPage) + 1;
   
   return (
     <PaginationContainer>
       <Button
-        disabled={!charactersInfo.prev}
+        disabled={!charactersInfo?.prev}
         onClick={onPrev}
       >
         Previous
       </Button>
       <Text>
-        Page {currentPage} of {charactersInfo.pages}
+        Page {currentPage} of {charactersInfo?.pages ? charactersInfo.pages : '1'}
       </Text>
       <Button
-        disabled={!charactersInfo.next}
+        disabled={!charactersInfo?.next}
         onClick={onNext}
       >
         Next
@@ -32,13 +32,17 @@ function Pagination({ charactersInfo, onPrev, onNext }) {
   )
 }
 
+Pagination.defaultProps = {
+  charactersInfo: {},
+};
+
 Pagination.propTypes = {
   charactersInfo: PropTypes.shape({
-    count: PropTypes.number.isRequired,
+    count: PropTypes.number,
     next: PropTypes.string,
-    pages: PropTypes.number.isRequired,
+    pages: PropTypes.number,
     prev: PropTypes.string,
-  }).isRequired,
+  }),
   onPrev: PropTypes.func.isRequired,
   onNext: PropTypes.func.isRequired,
 }
