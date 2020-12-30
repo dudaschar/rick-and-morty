@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyles } from 'src/stylesUtils/globalStyles';
@@ -13,10 +12,5 @@ function App({ Component, pageProps }) {
     </ThemeProvider>
   )
 }
-
-App.propTypes = {
-  Component: PropTypes.object.isRequired,
-  pageProps: PropTypes.object.isRequired,
-};
 
 export default App

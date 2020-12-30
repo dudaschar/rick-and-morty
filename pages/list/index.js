@@ -5,7 +5,7 @@ import List from 'src/containers/List/List';
 
 function ListPage({ data, query }) {
   return (
-    <List characters={data.results} query={query} />
+    <List characters={data} query={query} />
   );
 }
 
