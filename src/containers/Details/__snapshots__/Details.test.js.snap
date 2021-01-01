@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details Container should render the all the character details 1`] = `
+<DocumentFragment>
+  <div
+    class="Wrapper-sc-1ev0bl-0 ddbBPU"
+  >
+    <div
+      class="Wrapper__Card-sc-1ev0bl-2 gNmYJj"
+    >
+      <div
+        class="Wrapper__CharacterDetails-sc-1ev0bl-1 dfCozP"
+      >
+        <h1
+          class="Typography__CharacterName-sc-10u1p47-0 ixSsBh"
+        >
+          Morty Smith
+        </h1>
+        <p>
+          <strong>
+            Status:
+          </strong>
+           Alive
+        </p>
+        <p>
+          <strong>
+            Species:
+          </strong>
+           Human
+        </p>
+        <p>
+          <strong>
+            Gender:
+          </strong>
+           Male
+        </p>
+        <p>
+          <strong>
+            Type:
+          </strong>
+           N/A
+        </p>
+        <p>
+          <strong>
+            Origin:
+          </strong>
+           Earth
+        </p>
+        <p>
+          <strong>
+            Location:
+          </strong>
+           Earth
+        </p>
+        <h2
+          class="Typography__EpisodesTitle-sc-10u1p47-1 hYXKTM"
+        >
+          Episodes
+        </h2>
+        <ul
+          class="List-mqktuz-0 eAfkDN"
+        >
+          <li
+            class="List__ListItem-mqktuz-1 ldSvgq"
+          >
+            <p>
+              <strong>
+                Name:
+              </strong>
+               Episode 1
+            </p>
+            <p>
+              <strong>
+                Air Date:  
+              </strong>
+               13 jun
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="Wrapper__ImageDetail-sc-1ev0bl-3 kbyIea"
+      >
+        <img
+          alt="Morty Smith"
+          class="Image-sc-1ma6ryq-0 kNpbEf"
+          src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+        />
+        <button
+          class="BaseButton-us6ig9-0 gNpRQk"
+        >
+          Buy merchandise
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
