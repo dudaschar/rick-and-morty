@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination Component should render properly 1`] = `
+<DocumentFragment>
+  <div
+    class="Wrapper__PaginationContainer-sc-1u8z2uu-0 cTlRQS"
+  >
+    <button
+      class="BaseButton-us6ig9-0 gNpRQk"
+    >
+      Previous
+    </button>
+    <span
+      class="Typography__Text-sc-1byrzvq-0 dZlshT"
+    >
+      Page 1 of 5
+    </span>
+    <button
+      class="BaseButton-us6ig9-0 gNpRQk"
+    >
+      Next
+    </button>
+  </div>
+</DocumentFragment>
+`;

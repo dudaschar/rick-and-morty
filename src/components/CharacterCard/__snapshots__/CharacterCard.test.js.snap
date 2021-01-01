@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterCard Component should render the component properly 1`] = `
+<DocumentFragment>
+  <a
+    class="Wrapper__Card-f2s50d-0 jLWtYJ"
+    href="/list/details?character=1"
+  >
+    <img
+      class="Image-sc-1012c2w-0 gGBmtk"
+      src="Rick_image_path.jpg"
+    />
+    <div
+      class="Wrapper__Content-f2s50d-1 hFMuHc"
+    >
+      <p
+        class="Typography__CardTitle-lx9mxg-0 igOmMr"
+      >
+        Rick
+      </p>
+      <p>
+        <strong>
+          Episodes:
+        </strong>
+         1
+      </p>
+      <p>
+        <strong>
+          Last location:
+        </strong>
+         Earth
+      </p>
+    </div>
+  </a>
+</DocumentFragment>
+`;
