@@ -1,30 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Rick and Morty Catalog
 
-## Getting Started
+This is a project that uses the [Rick and Morty API](https://rickandmortyapi.com) to search and display characters of the show based on their names.
+<br></br>
+### How to run the project
 
-First, run the development server:
+You will need to have `node >= 14` installed on your machine, use your preferred node version management such as `n` or `nvm`. Also, it is necessary to have a node package manager like `npm` or `yarn`, pick the one that you used to work.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+After install everything on your environment, those ones are the commands that you need to know:
+<br></br>
+#### Client 
+`localhost:3000`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`$ yarn dev` 
+To run the application in development mode
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+`$ yarn build` 
+Builds the application to production usage
 
-## Learn More
+`$ yarn start` 
+Starts a production server
 
-To learn more about Next.js, take a look at the following resources:
+`$ yarn test` 
+To run all tests
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`$ yarn test:watch` 
+To run tests in watch mode
+<br></br>
+The application is also available in production environment: https://rick-and-morty.dudaschar.vercel.app
+<br></br>
+### The project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To develop this application I have chosen Next.JS to deal with the routes and the SSR of my pages. I decided to make the requests to build the page on the server-side, then just made requests on the client when necessary. For example, load more results or clean up the filters. This way, my page will be completely available and interactive first.
 
-## Deploy on Vercel
+Along with Next.JS, I am using Styled Components to deal with styling, Jest, and React Testing Library to testing React components.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
